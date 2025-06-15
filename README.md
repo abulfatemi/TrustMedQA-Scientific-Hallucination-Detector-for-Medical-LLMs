@@ -44,9 +44,9 @@ The verdict is determined based on:
 
 ## 📷 Screenshots
 
-(You can add screenshots here, for example:)
 
-![trustmedqa_ui](https://github.com/user-attachments/assets/your-image-url)
+
+
 
 ---
 
