@@ -51,9 +51,7 @@ The verdict is determined based on:
 
 ## 📹 Demo Video
 
-(Upload or link to a Loom, GitHub video, or YouTube if available)
-
-https://github.com/user-attachments/assets/your-demo-url
+https://github.com/user-attachments/assets/ac2aa606-fa21-43f0-8a53-77ad91d3eea2
 
 ---
 
