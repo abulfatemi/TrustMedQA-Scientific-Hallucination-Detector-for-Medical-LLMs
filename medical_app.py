@@ -1,10 +1,10 @@
 import streamlit as st
 
-# === Title ===
+# Title
 st.title("🩺 LLM Hallucination Inspector (Medical)")
 st.markdown("Check if an LLM-generated medical answer contains hallucinations, using scientific evidence and entailment analysis.")
 
-# === User Input ===
+# Question
 question = st.text_input("Enter a medical question:", "")
 
 from helper_functions import get_llm_answer_chain, extract_claims, extract_answer, get_evidence, get_entailment_roberta, is_hallucinated_with_explanation,extract_answer
@@ -14,7 +14,7 @@ if st.button("Analyze"):
         st.warning("Please enter a question.")
     else:
         with st.spinner("Generating answer and analyzing claims..."):
-            # === Step 1: Get Answer and Claims ===
+            # Get Answer and Claims
             chain=get_llm_answer_chain()
 
             response = chain(question)
@@ -23,7 +23,7 @@ if st.button("Analyze"):
             st.subheader("💬 LLM Answer")
             st.markdown(answer1)
 
-            # === Step 2: Analyze Claims ===
+            # Analyze Claim
             st.subheader("🔍 Claim Analysis")
             path='/content/pubmedqa_biobert.index'
 
@@ -32,10 +32,10 @@ if st.button("Analyze"):
             for idx, claim in enumerate(claims):
                 st.markdown(f"**Claim {idx+1}:** {claim}")
 
-                # Step 2a: Get Evidence
+                # Get Evidence
                 evidence = get_evidence(claim,path)
 
-                # Step 2b: Check Entailment
+                # Check Entailment
                 label, confidence = get_entailment_roberta(claim, evidence)
                 labels.append(label)
                 confidences.append(confidence)
@@ -46,5 +46,6 @@ if st.button("Analyze"):
 
                 with st.expander("📚 View Retrieved Evidence"):
                     st.markdown(evidence)
+            # Final Result
             res=is_hallucinated_with_explanation(labels,confidences)
             st.markdown(f"**Hallucination Result:** `{res}`")
