@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
-
-
-
-
 
 # Load LLM Model
 from langchain_google_genai import GoogleGenerativeAI
