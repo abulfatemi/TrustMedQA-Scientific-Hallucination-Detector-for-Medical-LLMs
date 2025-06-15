@@ -12,9 +12,9 @@ This project addresses the rising concern of **LLM hallucinations in high-stakes
 - The system uses **Google Gemini** to generate an answer and extract 2–4 supporting claims.
 - Claims are passed to a **retriever**, which searches for evidence in the **PubMedQA dataset** using **BioBERT embeddings + FAISS**.
 - Each claim is then analyzed using an **entailment model** (BioClinicalBERT) to determine if it is:
-  - ✅ Entailed (supported),
-  - ❌ Contradicted,
-  - ⚠️ Neutral (unverifiable).
+  -  Entailed (supported),
+  -  Contradicted,
+  -  Neutral (unverifiable).
 - The system aggregates results and outputs a final verdict:
   - `Supported`, `Hallucinated`, or `Unverifiable`
 
@@ -36,9 +36,9 @@ The verdict is determined based on:
 - Presence of only neutral evidence.
 
 ### Verdict Categories:
-- ✅ Supported — strong scientific evidence backs the claims.
-- ❌ Hallucinated — multiple claims are contradicted or weakly supported.
-- ⚠️ Unverifiable — claims are neutral, lacking strong support or contradiction.
+-  Supported — strong scientific evidence backs the claims.
+-  Hallucinated — multiple claims are contradicted or weakly supported.
+-  Unverifiable — claims are neutral, lacking strong support or contradiction.
 
 ---
 
