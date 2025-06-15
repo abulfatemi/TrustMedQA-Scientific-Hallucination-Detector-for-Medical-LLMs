@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Title
-st.title("🩺 LLM Hallucination Inspector (Medical)")
+st.title("🩺 TrustMedQA: Scientific Verifier for LLM-Generated Medical Answers")
 st.markdown("Check if an LLM-generated medical answer contains hallucinations, using scientific evidence and entailment analysis.")
 
 # Question
