@@ -1,0 +1,1 @@
+# TrustMedQA-Scientific-Hallucination-Detector-for-Medical-LLMs
