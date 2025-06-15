@@ -44,8 +44,7 @@ The verdict is determined based on:
 
 ## 📷 Screenshots
 
-!(https://github.com/abulfatemi/TrustMedQA-Scientific-Verifier-for-LLM-Generated-Medical-Answers/blob/main/16.06.2025_04.31.24_REC.png)
-
+![UI](https://github.com/user-attachments/assets/42134288-c168-4176-bed8-ae1b3007e63b)
 
 
 ---
